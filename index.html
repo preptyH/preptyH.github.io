@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>preptyH — Fabrika ve küçük işletme yazılımları</title>
+  <title>preptyH – Fabrika ve küçük işletme yazılımları</title>
   <meta name="description" content="Kâğıtla ve Excel'le yürüyen işleri telefonda çalışan yazılıma çeviriyorum: bakım, malzeme, rapor, bot ve otomasyon.">
-  <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#151513" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#E9ECEF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1A222C" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
       <nav aria-label="Ana menü">
         <a href="#isler">İşler</a>
         <a href="#hakkimda">Hakkımda</a>
-        <a class="vurgu-link" href="#calisalim">Birlikte çalışalım</a>
+        <a class="dugme" href="#calisalim">Birlikte çalışalım</a>
       </nav>
     </div>
   </header>
@@ -30,49 +30,33 @@
   <main>
     <section class="giris" aria-labelledby="baslik">
       <div class="kap">
+        <p class="isim" aria-hidden="true">preptyH</p>
         <h1 id="baslik">Kâğıtla ve Excel'le yürüyen işleri, telefonda çalışan yazılıma çeviriyorum.</h1>
-        <p class="alt-baslik">Fabrikalar ve küçük işletmeler için bakım, malzeme ve rapor yazılımları; etraflarında da botlar ve otomasyonlar. Gündüz bir üretim tesisinde çalışıyorum, yazdığım şeyin sahada işe yarayıp yaramadığını görüyorum.</p>
-        <p class="iletisim-satiri">
+        <p>Fabrikalar ve küçük işletmeler için bakım, malzeme ve rapor yazılımları; etraflarında da botlar ve otomasyonlar. Gündüz bir üretim tesisinde çalışıyorum, yazdığım şeyin sahada işe yarayıp yaramadığını görüyorum.</p>
+        <div class="baglar">
           <a href="https://github.com/preptyH" rel="me noopener" target="_blank">GitHub</a>
-          <span aria-hidden="true">·</span>
           <a href="https://www.linkedin.com/in/halil-ibrahim-alt%C4%B1n-733908251" rel="me noopener" target="_blank">LinkedIn</a>
-          <span aria-hidden="true">·</span>
-          <a href="#calisalim">Birlikte çalışalım</a>
-        </p>
+        </div>
       </div>
     </section>
 
     <section id="isler" class="bolum" aria-labelledby="isler-baslik">
       <div class="kap">
-        <h2 id="isler-baslik" class="bolum-baslik">Dört iş, sayılarıyla</h2>
-        <p class="bolum-not">Her birinde sorun, yaptığım şey ve ölçtüğüm sonuç var. Ekran görüntüleri gerçek uygulamalardan; içlerindeki kişi, firma ve rakamlar sahtedir.</p>
+        <h2 id="isler-baslik">Dört iş, sayılarıyla</h2>
+        <p class="not">Her birinde sorun, yaptığım şey ve ölçtüğüm sonuç var. Ekran görüntüleri gerçek uygulamalardan; içlerindeki kişi, firma ve rakamlar sahtedir.</p>
       </div>
 
-      <!-- 01 -->
       <article class="vaka" aria-labelledby="v1">
         <div class="kap vaka-izgara">
-          <aside class="vaka-meta">
-            <p class="no">01</p>
-            <dl>
-              <dt>Alan</dt><dd>Fabrika / bakım yazılımı</dd>
-              <dt>Teknoloji</dt><dd>ASP.NET Core 8, SQLite, Flutter (Android + web), düz JS yönetim paneli</dd>
-              <dt>Depo</dt><dd>Özel; isteyene ekranda gösteririm</dd>
-            </dl>
-          </aside>
-          <div class="vaka-icerik">
+          <div class="vaka-baslik">
             <h3 id="v1">Çalışan İzleme</h3>
+            <p class="kunye"><span>Fabrika bakım yazılımı</span><span>ASP.NET Core 8, SQLite, Flutter (Android ve web), düz JS yönetim paneli</span><span>Depo özel, isteyene ekranda gösteririm</span></p>
+          </div>
+          <div class="vaka-icerik">
             <p class="ozet">Sahadaki ekip telefondan kontrol, arıza ve iş kaydı girer; şef ve yönetici panelden duruşu ve kaybı izler.</p>
-
-            <h4>Sorun</h4>
-            <p>Kâğıt form, kaybolan vardiya bilgisi ve "bu arıza neden tekrar etti?" sorusuna cevap verememek.</p>
-
-            <h4>Ne yaptım</h4>
-            <p>Telefon internetsiz kayıt alır, ağ gelince tekrarsız gönderir. Sunucu tesisin kendi bilgisayarında çalışır; bulut, CDN ve telemetri yok, veri dışarı çıkmaz. Kayıtlar değiştirilemez bir olay defterine yazılır ve hash zinciriyle doğrulanır. Beş rol (Admin, Yönetici, Şef, Formen, Sorumlu) var ve yetkiler sunucuda denetlenir.</p>
-
-            <h4>Sonuç</h4>
-            <p class="sayi"><strong>338</strong> xUnit testi, <strong>0</strong> başarısız. Bugün tekrar koşturdum.</p>
-            <p>Tek komutla, 3 aylık sahte geçmişi olan bir demo ayağa kalkıyor.</p>
-
+            <p><strong>Sorun.</strong> Kâğıt form, kaybolan vardiya bilgisi ve "bu arıza neden tekrar etti?" sorusuna cevap verememek.</p>
+            <p><strong>Yaptığım.</strong> Telefon internetsiz kayıt alır, ağ gelince tekrarsız gönderir. Sunucu tesisin kendi bilgisayarında çalışır; bulut, CDN ve telemetri yok, veri dışarı çıkmaz. Kayıtlar değiştirilemez bir olay defterine yazılır ve hash zinciriyle doğrulanır. Beş rol (Admin, Yönetici, Şef, Formen, Sorumlu) var ve yetkiler sunucuda denetlenir.</p>
+            <p><strong>Sonuç.</strong> <mark>338</mark> xUnit testi, <mark>0</mark> başarısız; bugün tekrar koşturdum. Tek komutla, 3 aylık sahte geçmişi olan bir demo ayağa kalkıyor.</p>
             <figure class="gorsel">
               <a href="assets/img/fabrika-panel.webp" target="_blank" rel="noopener"><img src="assets/img/fabrika-panel.webp" width="1400" height="875" loading="lazy" alt="Çalışan İzleme yönetim paneli: kontrol durumu, açık arızalar, canlı fabrika ve personel kartları"></a>
               <figcaption>Yönetim paneli ana sayfası (sahte veri).</figcaption>
@@ -85,123 +69,89 @@
         </div>
       </article>
 
-      <!-- 02 -->
       <article class="vaka" aria-labelledby="v2">
         <div class="kap vaka-izgara">
-          <aside class="vaka-meta">
-            <p class="no">02</p>
-            <dl>
-              <dt>Alan</dt><dd>Mobil + web, fabrika malzeme yönetimi</dd>
-              <dt>Teknoloji</dt><dd>Flutter (Android + PC tarayıcı), PocketBase</dd>
-              <dt>Depo</dt><dd>Özel; isteyene ekranda gösteririm</dd>
-            </dl>
-          </aside>
-          <div class="vaka-icerik">
+          <div class="vaka-baslik">
             <h3 id="v2">Malzeme Takip</h3>
+            <p class="kunye"><span>Fabrika malzeme yönetimi, mobil ve web</span><span>Flutter (Android ve PC tarayıcı), PocketBase</span><span>Depo özel, isteyene ekranda gösteririm</span></p>
+          </div>
+          <div class="vaka-icerik">
             <p class="ozet">Malzeme talebi, onay, sipariş, stok ve dış sipariş takibi. Tek kod tabanı, hem PC'de hem telefonda.</p>
-
-            <h4>Sorun</h4>
-            <p>Bir malzemenin bekliyor, sipariş verildi, depoya geldi, yolda ya da teslim edildi olduğunu herkesin aynı yerden görebilmesi gerekiyordu.</p>
-
-            <h4>Ne yaptım</h4>
-            <p>Formen, şef ve yönetici onay zinciri kurala göre işliyor. Depo için öncelikli iş listesi, kritik stok, kısmi teslim ve muadil malzeme akışları var. İmzalı PDF formlar ve Excel çıktısı üretiliyor. Sunucu şirket içindeki bir bilgisayarda çalışan PocketBase; internet gerekmiyor. Bütün yazma işlemleri sunucuda doğrulanıyor.</p>
-
-            <h4>Sonuç</h4>
-            <p class="sayi"><strong>56</strong> Dart testi ve <strong>229</strong> sunucu kontrolü.</p>
-            <p>Kendi dizüstümde yük testi: <strong>300</strong> talep, <strong>769</strong> kalem ve <strong>840</strong> stok hareketi 30 saniyede; talep açma ortalama <strong>32 ms</strong> (p95 43 ms). Ardından veri tutarlılık denetimi temiz çıktı.</p>
-
+            <p><strong>Sorun.</strong> Bir malzemenin bekliyor, sipariş verildi, depoya geldi, yolda ya da teslim edildi olduğunu herkesin aynı yerden görebilmesi gerekiyordu.</p>
+            <p><strong>Yaptığım.</strong> Formen, şef ve yönetici onay zinciri kurala göre işliyor. Depo için öncelikli iş listesi, kritik stok, kısmi teslim ve muadil malzeme akışları var. İmzalı PDF formlar ve Excel çıktısı üretiliyor. Sunucu şirket içindeki bir bilgisayarda çalışan PocketBase; internet gerekmiyor. Bütün yazma işlemleri sunucuda doğrulanıyor.</p>
+            <p><strong>Sonuç.</strong> <mark>56</mark> Dart testi ve <mark>229</mark> sunucu kontrolü. Kendi dizüstümde yük testi: 300 talep, 769 kalem ve 840 stok hareketi 30 saniyede; talep açma ortalama <mark>32 ms</mark> (p95 43 ms). Ardından veri tutarlılık denetimi temiz çıktı.</p>
           </div>
         </div>
       </article>
 
-      <!-- 03 -->
       <article class="vaka" aria-labelledby="v3">
         <div class="kap vaka-izgara">
-          <aside class="vaka-meta">
-            <p class="no">03</p>
-            <dl>
-              <dt>Alan</dt><dd>Veri / panel</dd>
-              <dt>Teknoloji</dt><dd>Python, Streamlit, pandas, pytest; isteğe bağlı Gemini</dd>
-              <dt>Depo</dt><dd><a href="https://github.com/preptyH/ai-fatura-denetci" target="_blank" rel="noopener">github.com/preptyH/ai-fatura-denetci</a></dd>
-            </dl>
-          </aside>
-          <div class="vaka-icerik">
+          <div class="vaka-baslik">
             <h3 id="v3">Fatura Denetçisi</h3>
+            <p class="kunye"><span>Veri paneli</span><span>Python, Streamlit, pandas, pytest; isteğe bağlı Gemini</span><span>Kod <a href="https://github.com/preptyH/ai-fatura-denetci" target="_blank" rel="noopener">GitHub'da açık</a></span></p>
+          </div>
+          <div class="vaka-icerik">
             <p class="ozet">Fatura listesini okuyup hatalı ve şüpheli kayıtları bulan bir panel.</p>
-
-            <h4>Sorun</h4>
-            <p>KDV hesabı, mükerrer fatura, kalem toplamı ve vade tutarsızlıkları, liste büyüdükçe elle yakalanamaz hale gelir.</p>
-
-            <h4>Ne yaptım</h4>
-            <p>CSV, Excel ve PDF fatura okuyor; KDV oranı ve hesabı, mükerrer kayıt, kalem toplamı, vade ve olağan dışı tutar kontrollerini çalıştırıyor. Bulgular filtrelenebiliyor ve CSV olarak indirilebiliyor. İsteğe bağlı Gemini açıklaması var; anahtar yoksa kural tabanlı özetle çalışmaya devam ediyor.</p>
-
-            <h4>Sonuç</h4>
-            <p class="sayi"><strong>506</strong> sahte faturaya bilerek koyduğum <strong>40</strong> hatanın <strong>40</strong>'ı yakalandı. Altı farklı örnek üretiminde de kaçan olmadı. <strong>25</strong> pytest testi geçiyor.</p>
-            <p>İlk sürümde olağan dışı tutar kontrolü koyduğum hatalardan birini kaçırdı; ortalama yerine medyana dayalı bir yönteme geçtim. Yanlış alarm sayısı üretimde 0 ile 3 arasında kalıyor.</p>
-
+            <p><strong>Sorun.</strong> KDV hesabı, mükerrer fatura, kalem toplamı ve vade tutarsızlıkları, liste büyüdükçe elle yakalanamaz hale gelir.</p>
+            <p><strong>Yaptığım.</strong> CSV, Excel ve PDF fatura okuyor; KDV oranı ve hesabı, mükerrer kayıt, kalem toplamı, vade ve olağan dışı tutar kontrollerini çalıştırıyor. Bulgular filtrelenebiliyor ve CSV olarak indirilebiliyor. İsteğe bağlı Gemini açıklaması var; anahtar yoksa kural tabanlı özetle çalışmaya devam ediyor.</p>
+            <p><strong>Sonuç.</strong> <mark>506</mark> sahte faturaya bilerek koyduğum 40 hatanın <mark>40</mark>'ı yakalandı. Altı farklı örnek üretiminde de kaçan olmadı. <mark>25</mark> pytest testi geçiyor. İlk sürümde olağan dışı tutar kontrolü koyduğum hatalardan birini kaçırdı; ortalama yerine medyana dayalı bir yönteme geçtim. Yanlış alarm sayısı üretimde 0 ile 3 arasında kalıyor.</p>
             <figure class="gorsel">
               <a href="assets/img/fatura-panel.webp" target="_blank" rel="noopener"><img src="assets/img/fatura-panel.webp" width="1366" height="976" loading="lazy" alt="Fatura Denetçisi paneli: 506 fatura, 47 bulgu, kontrol dağılımı grafiği ve bulgu tablosu"></a>
               <figcaption>Örnek verinin sonucu: 506 fatura, 47 bulgu (sahte veri).</figcaption>
             </figure>
+            <div class="demo" role="group" aria-labelledby="demo-b">
+              <p id="demo-b"><strong>Tarayıcıda dene.</strong> Aşağıdaki sahte faturaları değiştir, denetim sonucunu canlı gör. Bu, panelin KDV, toplam ve mükerrer kontrollerinin tarayıcıda çalışan basitleştirilmiş hâli; hiçbir veri bir yere gönderilmez.</p>
+              <div class="tablo-kap">
+                <table>
+                  <thead><tr><th scope="col">Fatura no</th><th scope="col">Firma</th><th scope="col">Matrah</th><th scope="col">KDV %</th><th scope="col">KDV tutarı</th><th scope="col">Toplam</th></tr></thead>
+                  <tbody id="fatura-govde"></tbody>
+                </table>
+              </div>
+              <noscript><p>Bu demo için JavaScript gerekir.</p></noscript>
+              <ul id="fatura-sonuc" class="sonuc" aria-live="polite"></ul>
+              <button type="button" class="ikinci" id="fatura-sifirla">Örnek veriye dön</button>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- 04 -->
       <article class="vaka" aria-labelledby="v4">
         <div class="kap vaka-izgara">
-          <aside class="vaka-meta">
-            <p class="no">04</p>
-            <dl>
-              <dt>Alan</dt><dd>Otomasyon / bot</dd>
-              <dt>Teknoloji</dt><dd>Python, Telegram, MCP, Claude Code, Gemini, Ollama</dd>
-              <dt>Depo</dt><dd>Özel; isteyene ekranda gösteririm</dd>
-            </dl>
-          </aside>
-          <div class="vaka-icerik">
+          <div class="vaka-baslik">
             <h3 id="v4">Telegram'dan yönetilen bilgisayar ajanı</h3>
+            <p class="kunye"><span>Otomasyon ve bot</span><span>Python, Telegram, MCP, Claude Code, Gemini, Ollama</span><span>Depo özel, isteyene ekranda gösteririm</span></p>
+          </div>
+          <div class="vaka-icerik">
             <p class="ozet">Telefondan yazdığım mesajla bilgisayardaki işleri yaptıran kişisel bir ajan.</p>
-
-            <h4>Sorun</h4>
-            <p>Dosya, tarayıcı, ekran ve kod işlerini, bilgisayarın başında olmadan tek bir konuşmadan yürütmek.</p>
-
-            <h4>Ne yaptım</h4>
-            <p>Telegram botu mesajı Claude Code'a veriyor; Claude, MCP araçlarıyla bilgisayarı kullanıyor (PowerShell, ekran görüntüsü, tıklama, tarayıcı). Alt işler Gemini, Ollama ve OpenAI modellerine paralel dağıtılıyor, üretilen kod sandbox'ta test ediliyor. Claude'un limiti dolarsa Gemini yedek beyin devralıyor. Bot çökerse bir bekçi program 5 saniyede yeniden başlatıyor. Bu hafta kural tabanlı bir yönlendirici ekledim: kısa sohbetleri ve basit görsel isteklerini daha ucuz modele, kod ve gece görevlerini varsayılan modele gönderiyor.</p>
-
-            <h4>Sonuç</h4>
-            <p class="sayi"><strong>23</strong> MCP aracı. Yönlendirici <strong>12</strong> birim testiyle doğrulandı, hepsi geçiyor.</p>
-            <p>Aynı mimariyle bir işletme için Telegram botu ya da bildirim otomasyonu kurabilirim.</p>
-
+            <p><strong>Sorun.</strong> Dosya, tarayıcı, ekran ve kod işlerini, bilgisayarın başında olmadan tek bir konuşmadan yürütmek.</p>
+            <p><strong>Yaptığım.</strong> Telegram botu mesajı Claude Code'a veriyor; Claude, MCP araçlarıyla bilgisayarı kullanıyor (PowerShell, ekran görüntüsü, tıklama, tarayıcı). Alt işler Gemini, Ollama ve OpenAI modellerine paralel dağıtılıyor, üretilen kod sandbox'ta test ediliyor. Claude'un limiti dolarsa Gemini yedek beyin devralıyor. Bot çökerse bir bekçi program 5 saniyede yeniden başlatıyor. Bu hafta kural tabanlı bir yönlendirici ekledim: kısa sohbetleri ve basit görsel isteklerini daha ucuz modele, kod ve gece görevlerini varsayılan modele gönderiyor.</p>
+            <p><strong>Sonuç.</strong> <mark>23</mark> MCP aracı. Yönlendirici <mark>12</mark> birim testiyle doğrulandı, hepsi geçiyor. Aynı mimariyle bir işletme için Telegram botu ya da bildirim otomasyonu kurabilirim.</p>
             <figure class="gorsel">
-              <svg viewBox="0 0 640 256" role="img" aria-labelledby="sema-b sema-a" class="sema">
+              <svg viewBox="0 0 640 256" role="img" aria-labelledby="sema-b sema-a" class="sema" id="ajan-sema">
                 <title id="sema-b">Ajan mimarisi</title>
                 <desc id="sema-a">Telegram'dan gelen mesaj orkestratöre gider. Orkestratör Claude Code'u çağırır, Claude Code MCP araçlarını kullanır. Claude ulaşılamazsa Gemini yedek beyin devreye girer. Bekçi program botu izler.</desc>
-                <g fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="10" y="95" width="110" height="52" rx="4"/>
-                  <rect x="170" y="95" width="130" height="52" rx="4"/>
-                  <rect x="350" y="30" width="150" height="52" rx="4"/>
-                  <rect x="350" y="165" width="150" height="52" rx="4"/>
-                  <rect x="545" y="30" width="90" height="52" rx="4"/>
+                <g fill="none" stroke="currentColor" stroke-width="2" class="oklar">
                   <path d="M120 121h50" marker-end="url(#ok)"/>
                   <path d="M300 108l50-52" marker-end="url(#ok)"/>
                   <path d="M300 134l50 56" marker-end="url(#ok)"/>
                   <path d="M500 56h45" marker-end="url(#ok)"/>
-                  <path d="M10 242h625" stroke-dasharray="4 5" opacity=".55"/>
+                  <path d="M10 242h625" stroke-dasharray="4 5" opacity=".55" stroke-width="1.5"/>
                 </g>
-                <defs><marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-                <g class="sema-yazi" text-anchor="middle">
-                  <text x="65" y="126">Telegram</text>
-                  <text x="235" y="126">Orkestratör</text>
-                  <text x="425" y="52">Claude Code</text>
-                  <text x="425" y="70" class="kucuk">beyin</text>
-                  <text x="425" y="187">Gemini</text>
-                  <text x="425" y="205" class="kucuk">yedek beyin</text>
-                  <text x="590" y="52">MCP</text>
-                  <text x="590" y="70" class="kucuk">23 araç</text>
-                  <text x="322" y="231" class="kucuk">bekçi program: çökerse 5 sn'de yeniden başlatır</text>
-                </g>
+                <defs><marker id="ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker></defs>
+                <g class="dugum" data-id="telegram"><rect x="10" y="95" width="110" height="52"/><text x="65" y="126" text-anchor="middle">Telegram</text></g>
+                <g class="dugum" data-id="orkestrator"><rect x="170" y="95" width="130" height="52"/><text x="235" y="126" text-anchor="middle">Orkestratör</text></g>
+                <g class="dugum" data-id="claude"><rect x="350" y="30" width="150" height="52"/><text x="425" y="52" text-anchor="middle">Claude Code</text><text x="425" y="70" text-anchor="middle" class="kucuk">beyin</text></g>
+                <g class="dugum" data-id="gemini"><rect x="350" y="165" width="150" height="52"/><text x="425" y="187" text-anchor="middle">Gemini</text><text x="425" y="205" text-anchor="middle" class="kucuk">yedek beyin</text></g>
+                <g class="dugum" data-id="mcp"><rect x="545" y="30" width="90" height="52"/><text x="590" y="52" text-anchor="middle">MCP</text><text x="590" y="70" text-anchor="middle" class="kucuk">23 araç</text></g>
+                <text x="322" y="231" text-anchor="middle" class="kucuk altyazi">bekçi program: çökerse 5 sn'de yeniden başlatır</text>
+                <circle id="nokta" r="7" cx="24" cy="121" opacity="0"/>
               </svg>
-              <figcaption>Mimari özeti. Bu projede arayüz yok, o yüzden ekran görüntüsü yerine şema koydum.</figcaption>
+              <div class="kontrol">
+                <button type="button" class="birinci" id="gonder">Mesaj gönder</button>
+                <label class="onay"><input type="checkbox" id="limit"> Claude'un limiti dolu olsun</label>
+              </div>
+              <ol class="gunluk" id="gunluk" aria-live="polite"></ol>
+              <figcaption>Gerçek akışın basitleştirilmiş canlı gösterimi. Mesaj gerçek bir bota gitmez. Bu projede arayüz olmadığı için ekran görüntüsü yerine bunu koydum.</figcaption>
             </figure>
           </div>
         </div>
@@ -210,7 +160,7 @@
 
     <section class="bolum" aria-labelledby="diger-baslik">
       <div class="kap">
-        <h2 id="diger-baslik" class="bolum-baslik">Diğer işler</h2>
+        <h2 id="diger-baslik">Diğer işler</h2>
         <ul class="liste">
           <li><a href="https://github.com/preptyH/bist-analiz-paneli" target="_blank" rel="noopener">BIST Analiz Paneli</a><span>F/K, PD/DD, temettü ve sektör karşılaştırması; çevrimdışı cache. Streamlit.</span></li>
           <li><a href="https://github.com/preptyH/claude-konsey-skill" target="_blank" rel="noopener">Konsey</a><span>Claude Code için 5 danışmanlı karar skill'i.</span></li>
@@ -225,7 +175,7 @@
 
     <section id="hakkimda" class="bolum" aria-labelledby="hak-baslik">
       <div class="kap vaka-izgara">
-        <aside class="vaka-meta"><h2 id="hak-baslik" class="bolum-baslik">Hakkımda</h2></aside>
+        <div class="vaka-baslik"><h2 id="hak-baslik">Hakkımda</h2></div>
         <div class="vaka-icerik metin">
           <p>Yazılım mühendisliği okuyorum, 2027'de mezun oluyorum. Gündüzleri bir gıda fabrikasında yazılım ve operasyon işi yapıyorum: hat başında ölçüm alıyor, duruşları takip ediyor, aylık performans raporu hazırlıyorum. Yazılımı bu yüzden sahadan öğreniyorum.</p>
           <p>Flutter, ASP.NET Core, React ve Python kullanıyorum. Claude Code ve Gemini gibi AI araçlarıyla çalışıyorum; ürettikleri kodu çalıştırıp test etmeden bir şey teslim etmem. Yukarıdaki sayılar bunun için orada.</p>
@@ -234,9 +184,9 @@
       </div>
     </section>
 
-    <section id="calisalim" class="bolum calisalim" aria-labelledby="cal-baslik">
+    <section id="calisalim" class="bolum" aria-labelledby="cal-baslik">
       <div class="kap vaka-izgara">
-        <aside class="vaka-meta"><h2 id="cal-baslik" class="bolum-baslik">Birlikte çalışalım</h2></aside>
+        <div class="vaka-baslik"><h2 id="cal-baslik">Birlikte çalışalım</h2></div>
         <div class="vaka-icerik metin">
           <p>Şu işlerde yardımcı olabilirim:</p>
           <ul class="hizmet">
@@ -248,8 +198,8 @@
           </ul>
           <p>Fiyat işe göre; kapsamı birlikte netleştirip sabit fiyat veriyorum. Bir fikrin varsa önce yaptıklarıma bakabilir, sonra yazabilirsin:</p>
           <p class="cta">
-            <a class="btn" href="https://github.com/preptyH" rel="me noopener" target="_blank">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/halil-ibrahim-alt%C4%B1n-733908251" rel="me noopener" target="_blank">LinkedIn</a>
+            <a href="https://github.com/preptyH" rel="me noopener" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/halil-ibrahim-alt%C4%B1n-733908251" rel="me noopener" target="_blank">LinkedIn</a>
           </p>
         </div>
       </div>
@@ -258,9 +208,12 @@
 
   <footer class="alt">
     <div class="kap alt-ic">
-      <span>© <span id="yil">2026</span> preptyH</span>
+      <span>© 2026 preptyH</span>
       <a href="#">Başa dön</a>
     </div>
   </footer>
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
