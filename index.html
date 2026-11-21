@@ -193,6 +193,23 @@
       </div>
     </section>
 
+    <section id="ai" class="bolum" aria-labelledby="ai-baslik">
+      <div class="kap vaka-izgara">
+        <div class="vaka-baslik"><h2 id="ai-baslik">Yapay zekâ ile nasıl çalışıyorum</h2></div>
+        <div class="vaka-icerik metin">
+          <p>Claude Code, Gemini ve yerel modelleri (Ollama) her gün işimin merkezinde kullanıyorum. Benim için yapay zekâ bir hızlandırıcı, karar verici değil: hızı ondan, doğruluğu kendi yöntemimden alıyorum.</p>
+          <ul class="hizmet">
+            <li><b>Önce plan.</b> İşi küçük, test edilebilir adımlara bölüyorum; yapay zekâya net görev ve kabul kriteri veriyorum.</li>
+            <li><b>Hızlı üretim.</b> Tekrar eden kodu yapay zekâya yazdırıp zamanımı mimariye, veriye ve kenar durumlara ayırıyorum. Bu portfolyodaki projelerin çoğu haftalar değil günler içinde çalışır hale geldi.</li>
+            <li><b>Doğrulama şart.</b> Her çıktıyı otomatik testlerle (pytest, Playwright, xUnit), kod incelemesiyle ve gerçek veriyle kontrol ediyorum. Doğrulanmamış kodu yayına almıyorum.</li>
+            <li><b>Kendi ajan sistemim.</b> Telegram'dan yönettiğim, görevine göre Claude, Gemini ya da yerel model seçen, MCP ile araç kullanan ve ürettiği kodu izole ortamda test eden çok modelli bir ajan sistemi kurdum; 7/24 çalışıyor.</li>
+            <li><b>Sınırları biliyorum.</b> Yapay zekânın hata yapabildiğini ve uydurabildiğini bildiğim için kaynak kontrol ediyorum; gizli bilgileri ve dışarıya giden işlemleri her zaman insan onayına bağlıyorum.</li>
+          </ul>
+          <p class="not">Örnek: GolHarita'da 21 otomatik test ve 3 ekran boyutunda uçtan uca test; bu sitenin Lighthouse performans puanı 98 (yerel ölçüm, mobil, 3 turun ortancası).</p>
+        </div>
+      </div>
+    </section>
+
     <section id="calisalim" class="bolum" aria-labelledby="cal-baslik">
       <div class="kap vaka-izgara">
         <div class="vaka-baslik"><h2 id="cal-baslik">Birlikte çalışalım</h2></div>
